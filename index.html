@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardea Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-cardea py-3">
+        <div class="container-fluid px-4">
+
+            <!-- 12-col grid wrapper -->
+            <div class="row w-100 align-items-center">
+
+                <!-- Brand: 2 cols -->
+                <div class="col-2">
+                    <a class="navbar-brand" href="#">CARDEA</a>
+                </div>
+
+                <!-- Toggler for mobile: pushed right -->
+                <div class="col-10 d-lg-none text-end">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cardeaNav"
+                        aria-controls="cardeaNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Nav links: 10 cols -->
+                <div class="col-lg-10 col-12">
+                    <div class="collapse navbar-collapse justify-content-end" id="cardeaNav">
+                        <ul class="navbar-nav gap-lg-1">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Video</a>
+                            </li>
+                            <!-- Dropdown: About Us -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">News</a></li>
+                                    <li><a class="dropdown-item" href="#">About</a></li>
+                                    <li><a class="dropdown-item" href="#">Skills</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Price</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- /row -->
+        </div><!-- /container-fluid -->
+    </nav>
+
+    <!-- nav-end -->
+
+    <!-- hero -->
+    <section class="hero">
+
+
+        <div class="hero-body">
+            <div class="container-fluid p-0 w-100">
+                <div class="row g-0">
+
+                    <!-- col-7: Title + Subtitle -->
+                    <div class="col-lg-7 col-12">
+                        <h1 class="hero-title">
+                            Digital<br>Crafters
+                        </h1>
+                        <p class="hero-subtitle">
+                            The not errors rendering handed he you concepts fate objective rare
+                            boss a road a he while what before to he is size separated room cold
+                            hunt, by and they my.
+                        </p>
+
+
+                        <a class="read-more" href="#">
+                            <!-- Outlined play/triangle -->
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 8 L38 24 L14 40 Z" fill="none" stroke="#e8735a" stroke-width="3.5"
+                                    stroke-linejoin="round" stroke-linecap="round" />
+                            </svg>
+                            <span>Read More</span>
+                        </a>
+                    </div>
+
+                    <!-- col-5: Diamond Button -->
+                    <div class="col-lg-5 col-12 position-relative d-none d-lg-block">
+                        <div class="diamond-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2"
+                                stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2 L22 12 L12 22 L2 12 Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero-info-bar">
+            <div class="container-fluid p-0 ">
+                <div class="row justify-content-end g-0 ">
+
+                    <!-- Agency: col-4 -->
+                    <div class="col-4">
+                        <div class="info-label">Agency</div>
+                        <div class="info-value">Digital crafted</div>
+                    </div>
+
+                    <!-- Mobile: col-4 -->
+                    <div class="col-4">
+                        <div class="info-label">Mobile</div>
+                        <div class="info-value">+987.654.321</div>
+                    </div>
+
+                    <!-- Email: col-4 -->
+                    <div class="col-4">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">hello@yoursite.com</div>
+                    </div>
+
+                    <!-- Agency: col-4 -->
+                    <div class="col-4 mt-sm-3">
+                        <div class="info-label">Agency</div>
+                        <div class="info-value">Digital crafted</div>
+                    </div>
+
+                    <!-- Mobile: col-4 -->
+                    <div class="col-4 mt-sm-3">
+                        <div class="info-label">Mobile</div>
+                        <div class="info-value">+987.654.321</div>
+                    </div>
+
+                    <!-- Email: col-4 -->
+                    <div class="col-4 mt-sm-3">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">hello@yoursite.com</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- hero-end -->
+    <br><br>
+    <!-- card -->
+
+    <section>
+        <div class="container-fluid">
+            <div class="row g-0 services-section">
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-card card-white">
+                        <div>
+
+                            <!-- Placeholder: pencil/design icon -->
+                            <div class="card-img-placeholder">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Pencil body -->
+                                    <rect x="18" y="4" width="8" height="26" rx="2" fill="#a07de0" />
+                                    <!-- Pencil tip -->
+                                    <polygon points="18,30 26,30 22,40" fill="#e8735a" />
+                                    <!-- Pencil top -->
+                                    <rect x="18" y="4" width="8" height="6" rx="2" fill="#7c4fc9" />
+                                    <line x1="18" y1="10" x2="26" y2="10" stroke="#fff" stroke-width="1.2" />
+                                    <!-- Ruler -->
+                                    <rect x="6" y="22" width="32" height="5" rx="2" fill="#c9a8f5" opacity="0.6" />
+                                    <line x1="12" y1="22" x2="12" y2="27" stroke="#fff" stroke-width="1" />
+                                    <line x1="18" y1="22" x2="18" y2="25" stroke="#fff" stroke-width="1" />
+                                    <line x1="24" y1="22" x2="24" y2="27" stroke="#fff" stroke-width="1" />
+                                    <line x1="30" y1="22" x2="30" y2="25" stroke="#fff" stroke-width="1" />
+                                </svg>
+                            </div>
+
+                            <div class="card-number">01</div>
+                            <h3 class="card-heading">Design</h3>
+                            <p class="card-desc">
+                                Bearable only through love of hydrogen atoms bits of moving
+                                fluff culture shores of the on cosmic ocean blue sky natural.
+                            </p>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div class="card-arrow">
+                            <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 5 L30 19 L10 33 Z" stroke="#e8735a" stroke-width="2.5"
+                                    stroke-linejoin="round" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-card card-white">
+                        <div>
+
+                            <!-- Code tag icon w-44 h-36 purple -->
+                            <div class="card-img-placeholder">
+                                <svg width="44" height="36" viewBox="0 0 44 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!-- < -->
+                                    <polyline points="13,4 3,18 13,32" stroke="#5b1d9e" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <!-- > -->
+                                    <polyline points="31,4 41,18 31,32" stroke="#5b1d9e" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <!-- / -->
+                                    <line x1="27" y1="4" x2="17" y2="32" stroke="#5b1d9e" stroke-width="3.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <div class="card-number">02</div>
+                            <h3 class="card-heading">Code</h3>
+                            <p class="card-desc">
+                                Global death rich in heavy with pretty stories for which is on there's
+                                little good evidence something incredible lorem ipsum.
+                            </p>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div class="card-arrow">
+                            <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 5 L30 19 L10 33 Z" stroke="#e8735a" stroke-width="2.5"
+                                    stroke-linejoin="round" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12" style="position:relative;">
+                    <div class="service-card card-purple">
+                        <div>
+
+                            <!-- Chat bubble -->
+                            <div class="chat-icon">
+                                <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="6" y="6" width="48" height="40" rx="7" stroke="#fff" stroke-width="3.2"
+                                        fill="none" />
+                                    <path d="M14 46 L10 60 L28 50" stroke="#fff" stroke-width="3.2"
+                                        stroke-linejoin="round" stroke-linecap="round" fill="none" />
+                                </svg>
+                            </div>
+
+                            <div class="card-number">03</div>
+                            <h3 class="card-heading">Support</h3>
+                            <p class="card-desc">
+                                Evidence something incredible is waiting to be known not a sunrise
+                                but a galaxyrise shores of the cosmic mountian peak.
+                            </p>
+
+                            <a class="read-more" href="#">
+                                <!-- Outlined play/triangle -->
+                                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 8 L38 24 L14 40 Z" fill="none" stroke="#e8735a" stroke-width="3.5"
+                                        stroke-linejoin="round" stroke-linecap="round" />
+                                </svg>
+                                <span>Read More</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- card-end -->
+    <br><br>
+
+    <!-- image-galary -->
+
+    <section class="portfolio-banner">
+        <div class="container-fluid p-0">
+            <div class="row g-0 align-items-end">
+                <div class="col-10">
+                    <p class="banner-label">Our Work</p>
+                    <h2 class="banner-heading">
+                        Check our super<br>awesome portfolio
+                    </h2>
+                </div>
+            </div>
+            <br>
+            <!-- gallery -->
+
+            <div class="gallery-container">
+                <div class="gallery-grid">
+
+                    <div class="g-cell cell-1">
+                        <img src="https://picsum.photos/seed/cardea1/600/900" alt="Gallery image 1" />
+                    </div>
+
+                    <div class="g-cell cell-2">
+                        <img src="https://picsum.photos/seed/cardea2/800/500" alt="Gallery image 2" />
+                    </div>
+
+                    <div class="cell-row2-right">
+                        <div class="g-cell">
+                            <img src="https://picsum.photos/seed/cardea3/400/400" alt="Gallery image 3" />
+                        </div>
+                        <div class="g-cell">
+                            <img src="https://picsum.photos/seed/cardea4/400/400" alt="Gallery image 4" />
+                        </div>
+                    </div>
+
+                    <div class="g-cell cell-5">
+                        <img src="https://picsum.photos/seed/cardea5/600/500" alt="Gallery image 5" />
+                    </div>
+
+                    <div class="cell-row3-right">
+                        <div class="g-cell">
+                            <img src="https://picsum.photos/seed/cardea6/400/500" alt="Gallery image 6" />
+                        </div>
+                        <div class="g-cell">
+                            <img src="https://picsum.photos/seed/cardea7/400/500" alt="Gallery image 7" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- card-end -->
+
+    <!-- counter -->
+
+
+    <section class="stats-section">
+        <div class="container-fluid p-0">
+            <div class="row g-0 text-center">
+
+                <!-- ── Col 1: Clients Served ── col-4 -->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="stat-number" id="ClientsServed">000</div>
+                    <div class="stat-label">Clients Served</div>
+                    <div class="stat-icon">
+                        <!-- Person / user icon -->
+                        <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="36" cy="20" r="14" />
+                            <path d="M6 64 C6 44 66 44 66 64 Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- ── Col 2: For Raw Data ── col-4 -->
+                <div class="col-lg-4 col-md-4 col-12 stat-col px-4 mb-5 mb-md-0">
+                    <div class="d-flex justify-content-center">
+                        <div class="stat-number" id="RawData">00</div>
+                        <span class="stat-number">T</span>
+                    </div>
+                    <div class="stat-label" >For Raw Data</div>
+                    <div class="stat-icon">
+                        <!-- Database / stack icon -->
+                        <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="36" cy="16" rx="26" ry="10" />
+                            <path d="M10 16 Q10 30 36 30 Q62 30 62 16" />
+                            <path d="M10 30 Q10 44 36 44 Q62 44 62 30" />
+                            <path d="M10 44 Q10 58 36 58 Q62 58 62 44" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- ── Col 3: Recommendation ── col-4 -->
+                <div class="col-lg-4 col-md-4 col-12 stat-col px-4">
+                    <div class="d-flex align-items-start gap-2">
+                        <div class="stat-number" id="Recommendation">000</div>
+                    </div>
+                    <div class="stat-label text-start ms-lg-4">Recommendation</div>
+                    <div class="stat-icon text-lg-start ms-lg-5">
+                        <!-- Thumbs up icon -->
+                        <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+                            <!-- thumb -->
+                            <path
+                                d="M28 44 L28 24 Q28 14 36 12 Q40 12 40 18 L40 30 L54 30 Q60 30 60 36 L58 54 Q57 60 50 60 L28 60 Z" />
+                            <!-- fist base -->
+                            <rect x="12" y="42" width="16" height="18" rx="4" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

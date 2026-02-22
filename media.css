@@ -1,0 +1,17 @@
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-body {
+        padding: 50px 24px 30px;
+    }
+
+    .diamond-btn {
+        right: 20px;
+        top: 40px;
+        transform: none;
+    }
+
+    .hero-info-bar {
+        width: 100%;
+        padding: 24px;
+    }
+}
