@@ -15,3 +15,26 @@
         padding: 24px;
     }
 }
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 700px) {
+    .portfolio-slide {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        width: 100%;
+        padding: 2.5rem 1.5rem 2rem;
+    }
+
+    .right-panel {
+        min-height: 50vw;
+    }
+
+    .img-front {
+        top: 40px;
+        left: 60px;
+        right: 20px;
+        bottom: 20px;
+    }
+}

@@ -481,9 +481,11 @@ body {
     margin: 0 auto;
     position: relative;
 }
-.card-group{
+
+.card-group {
     position: relative;
 }
+
 .articles-box {
     position: absolute;
     left: 0;
@@ -491,4 +493,80 @@ body {
     width: 100%;
     height: 230px;
     border: 10px solid #e8735a;
+}
+
+/* 3-image-end */
+
+/* our-work-portpolio */
+
+
+/* ── Hero block – matches screenshot dimensions/ratio ── */
+.hero-port {
+    background: #e8735f;
+    /* exact salmon from screenshot */
+    padding: 2.8rem 3rem 10rem;
+    /* matches the wide cropped banner shape in the screenshot */
+    max-width: 100%;
+    height: max-content;
+}
+
+.label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #4a35a8;
+    /* purple */
+    margin-bottom: 0.55rem;
+}
+
+.heading {
+    font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+}
+
+
+.panel {
+    background: #e8735f;
+    padding: 2.5rem 2.2rem 3rem;
+    max-width: 420px;
+    width: 100%;
+}
+
+.number {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #4a35a8;
+    margin-bottom: 0.2rem;
+}
+
+.name {
+    font-size: clamp(3rem, 10vw, 4.2rem);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.05;
+    margin-bottom: 2rem;
+}
+
+.desc {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 1.2rem;
+}
+
+.hero-port img{
+    position: relative;
+}
+.hero-port .port-img-box {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border: 10px solid #fff;
 }
