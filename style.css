@@ -570,3 +570,12 @@ body {
     margin-left: 50px;
     border: 10px solid #fff;
 }
+
+.hero-port .port-img-box-sec {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    margin-top: 50px;
+    margin-left: -55px;
+    border: 10px solid #fff;
+}
