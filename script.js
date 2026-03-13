@@ -16,16 +16,17 @@
 // }
 
 // Create main container
+// let price = document.getElementById("price-plan");
 let container = document.getElementById("price-column")
 container = document.createElement("div");
 container.style.display = "flex";
 container.style.justifyContent = "space-around";
 container.style.alignItems = "flex-center";
 container.style.padding = "60px";
+// price.style.height = "auto"
 // container.style.backgroundColor = "#f2f2f2";
 container.style.fontFamily = "Arial";
 document.body.appendChild(container);
-
 // Pricing data
 let plans = [
     {
@@ -98,3 +99,7 @@ function createPlan(plan, addBorder = false) {
 container.appendChild(createPlan(plans[0]));
 container.appendChild(createPlan(plans[1], true));
 container.appendChild(createPlan(plans[2], true));
+
+
+// testimonial
+
