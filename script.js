@@ -15,91 +15,57 @@
 //     }
 // }
 
-// Create main container
-// let price = document.getElementById("price-plan");
-let container = document.getElementById("price-column")
-container = document.createElement("div");
-container.style.display = "flex";
-container.style.justifyContent = "space-around";
-container.style.alignItems = "flex-center";
-container.style.padding = "60px";
-// price.style.height = "auto"
-// container.style.backgroundColor = "#f2f2f2";
-container.style.fontFamily = "Arial";
-document.body.appendChild(container);
-// Pricing data
-let plans = [
-    {
-        users: "25 USERS PER PROJECT",
-        projects: "100 PROJECT",
-        storage: "10 TB CLOUD STORAGE",
-        reports: "50 REPORTS",
-        bandwidth: "100 GB BANDWIDTH",
-        tickets: "50 SUPPORT TICKETS"
-    },
-    {
-        users: "50 USERS PER PROJECT",
-        projects: "150 PROJECT",
-        storage: "15 TB CLOUD STORAGE",
-        reports: "75 REPORTS",
-        bandwidth: "150 GB BANDWIDTH",
-        tickets: "75 SUPPORT TICKETS"
-    },
-    {
-        users: "100 USERS PER PROJECT",
-        projects: "200 PROJECT",
-        storage: "20 TB CLOUD STORAGE",
-        reports: "100 REPORTS",
-        bandwidth: "200 GB BANDWIDTH",
-        tickets: "100 SUPPORT TICKETS"
-    }
+const plans = [
+    [
+        "25 Users Per Project",
+        "100 Project",
+        "10 TB Cloud Storage",
+        "50 Reports",
+        "100 GB Bandwidth",
+        "50 Support Tickets"
+    ],
+    [
+        "50 Users Per Project",
+        "150 Project",
+        "15 TB Cloud Storage",
+        "75 Reports",
+        "150 GB Bandwidth",
+        "75 Support Tickets"
+    ],
+    [
+        "100 Users Per Project",
+        "200 Project",
+        "20 TB Cloud Storage",
+        "100 Reports",
+        "200 GB Bandwidth",
+        "100 Support Tickets"
+    ]
 ];
 
-// Function to create a plan column
-function createPlan(plan, addBorder = false) {
-    let column = document.createElement("div");
-    column.style.textAlign = "center";
-    column.style.color = "purple";
-    column.style.padding = "20px";
-    column.style.width = "300px";
+const container = document.getElementById('pricing-container');
 
-    if (addBorder) {
-        column.style.borderLeft = "2px solid purple";
-    }
+plans.forEach(function (features) {
+    const col = document.createElement('div');
+    col.className = 'plan-col';
 
-    let features = Object.values(plan);
-
-    features.forEach(text => {
-        let p = document.createElement("p");
-        p.textContent = text;
-        p.style.margin = "20px 0";
-        column.appendChild(p);
+    const ul = document.createElement('ul');
+    ul.className = 'features';
+    features.forEach(function (text) {
+        const li = document.createElement('li');
+        li.textContent = text;
+        ul.appendChild(li);
     });
 
-    // Order Now Text
-    let order = document.createElement("h3");
-    order.textContent = "Order Now";
-    order.style.marginTop = "50px";
-    column.appendChild(order);
+    const orderBtn = document.createElement('button');
+    orderBtn.className = 'order-btn';
+    orderBtn.textContent = 'Order Now';
 
-    // Triangle icon (play button style)
-    let triangle = document.createElement("div");
-    triangle.style.width = "0";
-    triangle.style.height = "0";
-    triangle.style.borderLeft = "30px solid #e67e5f";
-    triangle.style.borderTop = "20px solid transparent";
-    triangle.style.borderBottom = "20px solid transparent";
-    triangle.style.margin = "20px auto";
-    column.appendChild(triangle);
+    const arrowBtn = document.createElement('button');
+    arrowBtn.className = 'arrow-btn';
+    arrowBtn.innerHTML = '<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><polygon points="7,4 22,14 7,24"/></svg>';
 
-    return column;
-}
-
-// Append plans
-container.appendChild(createPlan(plans[0]));
-container.appendChild(createPlan(plans[1], true));
-container.appendChild(createPlan(plans[2], true));
-
-
-// testimonial
-
+    col.appendChild(ul);
+    col.appendChild(orderBtn);
+    col.appendChild(arrowBtn);
+    container.appendChild(col);
+});

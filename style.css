@@ -585,10 +585,6 @@ body {
 
 /* price plan */
 
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
 
 /* Header Section */
 .header {
@@ -730,8 +726,6 @@ body {
     fill: none;
 }
 
-
-
 /* Decorative elements */
 .decoration {
     position: fixed;
@@ -771,12 +765,74 @@ body {
     }
 }
 
-.content-wrapper {
+#pricing-container {
+    width: 960px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.plan-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px 28px;
     position: relative;
-    z-index: 1;
+}
+
+.plan-col+.plan-col {
+    border-left: 1.5px solid #3b1f7a;
+}
+
+.features {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.features li {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .08em;
+    color: #3b1f7a;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.order-btn {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .28em;
+    color: #3b1f7a;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 18px;
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-btn svg {
+    width: 26px;
+    height: 26px;
+}
+
+.arrow-btn svg polygon {
+    fill: none;
+    stroke: #e07060;
+    stroke-width: 2.2;
+    stroke-linejoin: round;
 }
 
 /* price-plan-end */
 
 /* testimonial */
-
