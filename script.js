@@ -101,3 +101,43 @@ if (window.matchMedia("(min-width:576px)").matches) {
 } else {
     $(multipleItemCarousel).addClass("slide");
 }
+
+
+// testimonial-end
+
+//bar-section
+const TRACK_H = 300;
+
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+
+        const groups = document.querySelectorAll('.bar-group');
+        groups.forEach(function (group, i) {
+            const fill = group.querySelector('.fill');
+            const label = group.querySelector('.bar-pct');
+            const target = parseInt(fill.dataset.target);
+
+            setTimeout(function () {
+                // grow bar up
+                fill.style.height = Math.round((target / 100) * TRACK_H) + 'px';
+
+                // count up
+                const duration = 1400;
+                const start = performance.now();
+                function tick(now) {
+                    const p = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - p, 3);
+                    label.textContent = Math.round(eased * target) + '%';
+                    if (p < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+
+            }, i * 120);
+        });
+
+        observer.disconnect();
+    });
+}, { threshold: 0.25 });
+
+observer.observe(document.getElementById('chartWrap'));

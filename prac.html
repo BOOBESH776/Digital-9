@@ -2,96 +2,222 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Chart Parallax</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #e8765a;
+            font-family: 'Josefin Sans', sans-serif;
+            min-height: 250vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* sticky wrapper keeps chart in view while scrolling */
+        .sticky-wrap {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: flex-start;
+            width: 100%;
+        }
+
+        .chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 28px;
+            padding: 40px 48px 0;
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bar-wrap {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
+        /* white track */
+        .track {
+            width: 72px;
+            height: 320px;
+            background: #fff;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        /* purple fill — height driven by CSS custom property set via JS on scroll */
+        .fill {
+            width: 100%;
+            background: #3d2fb5;
+            height: calc(var(--p, 0) * 1%);
+            /* no transition — pure scroll-driven parallax */
+        }
+
+        /* rotated label */
+        .label {
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: .2em;
+            color: #3d2fb5;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            padding-bottom: 4px;
+        }
+
+        /* percent text */
+        .percent {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: .04em;
+            padding: 14px 0 20px;
+        }
+
+        /* scroll hint */
+        .hint {
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 11px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            opacity: .7;
+            animation: bounce 1.4s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(6px);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <script>
-        // Create main container
-        let container = document.createElement("div");
-        container.style.display = "flex";
-        container.style.justifyContent = "space-around";
-        container.style.alignItems = "flex-start";
-        container.style.padding = "60px";
-        container.style.backgroundColor = "#f2f2f2";
-        container.style.fontFamily = "Arial";
-        document.body.appendChild(container);
 
-        // Pricing data
-        let plans = [
-            {
-                users: "25 USERS PER PROJECT",
-                projects: "100 PROJECT",
-                storage: "10 TB CLOUD STORAGE",
-                reports: "50 REPORTS",
-                bandwidth: "100 GB BANDWIDTH",
-                tickets: "50 SUPPORT TICKETS"
-            },
-            {
-                users: "50 USERS PER PROJECT",
-                projects: "150 PROJECT",
-                storage: "15 TB CLOUD STORAGE",
-                reports: "75 REPORTS",
-                bandwidth: "150 GB BANDWIDTH",
-                tickets: "75 SUPPORT TICKETS"
-            },
-            {
-                users: "100 USERS PER PROJECT",
-                projects: "200 PROJECT",
-                storage: "20 TB CLOUD STORAGE",
-                reports: "100 REPORTS",
-                bandwidth: "200 GB BANDWIDTH",
-                tickets: "100 SUPPORT TICKETS"
-            }
+    <div class="sticky-wrap">
+        <div class="chart">
+
+            <!-- BAR 1 — Creativity 75% -->
+            <div class="bar-group">
+                <div class="bar-wrap">
+                    <div class="track">
+                        <div class="fill" id="f1" style="--p:0"></div>
+                    </div>
+                    <div class="label">Creativity</div>
+                </div>
+                <div class="percent" id="p1">0%</div>
+            </div>
+
+            <!-- BAR 2 — Cooking 43% -->
+            <div class="bar-group">
+                <div class="bar-wrap">
+                    <div class="track">
+                        <div class="fill" id="f2" style="--p:0"></div>
+                    </div>
+                    <div class="label">Cooking</div>
+                </div>
+                <div class="percent" id="p2">0%</div>
+            </div>
+
+            <!-- BAR 3 — PHP 90% -->
+            <div class="bar-group">
+                <div class="bar-wrap">
+                    <div class="track">
+                        <div class="fill" id="f3" style="--p:0"></div>
+                    </div>
+                    <div class="label">PHP</div>
+                </div>
+                <div class="percent" id="p3">0%</div>
+            </div>
+
+            <!-- BAR 4 — Marketing 62% -->
+            <div class="bar-group">
+                <div class="bar-wrap">
+                    <div class="track">
+                        <div class="fill" id="f4" style="--p:0"></div>
+                    </div>
+                    <div class="label">Marketing</div>
+                </div>
+                <div class="percent" id="p4">0%</div>
+            </div>
+
+            <!-- BAR 5 — Design 27% -->
+            <div class="bar-group">
+                <div class="bar-wrap">
+                    <div class="track">
+                        <div class="fill" id="f5" style="--p:0"></div>
+                    </div>
+                    <div class="label">Design</div>
+                </div>
+                <div class="percent" id="p5">0%</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        // targets & parallax speeds per bar
+        var bars = [
+            { fill: document.getElementById('f1'), pct: document.getElementById('p1'), target: 75, speed: 0.9 },
+            { fill: document.getElementById('f2'), pct: document.getElementById('p2'), target: 43, speed: 1.3 },
+            { fill: document.getElementById('f3'), pct: document.getElementById('p3'), target: 90, speed: 0.7 },
+            { fill: document.getElementById('f4'), pct: document.getElementById('p4'), target: 62, speed: 1.1 },
+            { fill: document.getElementById('f5'), pct: document.getElementById('p5'), target: 27, speed: 1.5 },
         ];
 
-        // Function to create a plan column
-        function createPlan(plan, addBorder = false) {
-            let column = document.createElement("div");
-            column.style.textAlign = "center";
-            column.style.color = "purple";
-            column.style.padding = "20px";
-            column.style.width = "300px";
+        function onScroll() {
+            var scrollY = window.scrollY;
+            var maxScroll = document.body.scrollHeight - window.innerHeight;
+            var base = scrollY / maxScroll; // 0 → 1
 
-            if (addBorder) {
-                column.style.borderLeft = "2px solid purple";
-            }
+            bars.forEach(function (b) {
+                var p = Math.min(base * b.speed, 1);          // parallax offset per bar
+                var eased = 1 - Math.pow(1 - p, 3);              // ease-out cubic
+                var val = eased * b.target;                     // 0 → target%
 
-            let features = Object.values(plan);
+                // CSS custom property drives the height via CSS calc()
+                b.fill.style.setProperty('--p', val.toFixed(2));
 
-            features.forEach(text => {
-                let p = document.createElement("p");
-                p.textContent = text;
-                p.style.margin = "20px 0";
-                column.appendChild(p);
+                // counter text
+                b.pct.textContent = Math.round(val) + '%';
             });
-
-            // Order Now Text
-            let order = document.createElement("h3");
-            order.textContent = "Order Now";
-            order.style.marginTop = "50px";
-            column.appendChild(order);
-
-            // Triangle icon (play button style)
-            let triangle = document.createElement("div");
-            triangle.style.width = "0";
-            triangle.style.height = "0";
-            triangle.style.borderLeft = "30px solid #e67e5f";
-            triangle.style.borderTop = "20px solid transparent";
-            triangle.style.borderBottom = "20px solid transparent";
-            triangle.style.margin = "20px auto";
-            column.appendChild(triangle);
-
-            return column;
         }
 
-        // Append plans
-        container.appendChild(createPlan(plans[0]));
-        container.appendChild(createPlan(plans[1], true));
-        container.appendChild(createPlan(plans[2], true));
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
     </script>
+
 </body>
 
 </html>

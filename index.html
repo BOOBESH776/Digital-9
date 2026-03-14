@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/57dbbee216.js" crossorigin="anonymous"></script>
     <style>
         html,
@@ -623,229 +624,107 @@
             <div id="pricing-container"></div>
         </div>
     </div>
-    <br><br><br><br><br>
+
     <!-- price-end -->
 
     <!-- testimonial -->
 
     <div class="testimonial-container">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center text-light">
                 <h2>Tetimonials</h2>
             </div>
+        </div><br><br>
+        <div class="row">
+            <div class="col">
+                <!-- radio controls OUTSIDE slider-wrap so ~ sibling selector works -->
+                <input type="radio" name="slide" id="s1" checked />
+                <input type="radio" name="slide" id="s2" />
+                <input type="radio" name="slide" id="s3" />
 
-            <div class="row">
-                <div class="col">
-                    <div class="container-fluid bg-body-tertiary py-3">
-                        <div id="testimonialCarousel" class="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/square-headshot-1.png"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">Jane Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="slider-wrap">
+                    <div class="slides">
+
+                        <!-- SLIDE 1 -->
+                        <div class="slide">
+                            <div class="card">
+                                <div class="stars">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                                 </div>
-                                <div class="carousel-item">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/square-headshot-2.png"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">June Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">John Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">John Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">John Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">John Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">John Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">John Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card shadow-sm rounded-3">
-                                        <div class="quotes display-2 text-body-tertiary">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">"Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content."</p>
-                                            <div class="d-flex align-items-center pt-2">
-                                                <img src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
-                                                    alt="bootstrap testimonial carousel slider 2">
-                                                <div>
-                                                    <h5 class="card-title fw-bold">John Doe</h5>
-                                                    <span class="text-secondary">CEO, Example Company</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <p class="quote">Working with this team completely transformed how we manage our
+                                    projects. The platform is intuitive, fast, and genuinely enjoyable to use every
+                                    single day.</p>
+                                <div class="divider"></div>
+                                <div class="author">
+                                    <div class="avatar">A</div>
+                                    <div class="author-info">
+                                        <p class="name">Andrea Collins</p>
+                                        <p class="role">Product Manager, NovaTech</p>
                                     </div>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
-                    </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="slide">
+                            <div class="card">
+                                <div class="stars">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                                <p class="quote">The support team is exceptional. Every question was answered
+                                    promptly and the onboarding process was the smoothest I have ever experienced
+                                    with any SaaS tool.</p>
+                                <div class="divider"></div>
+                                <div class="author">
+                                    <div class="avatar">M</div>
+                                    <div class="author-info">
+                                        <p class="name">Marcus Reid</p>
+                                        <p class="role">CTO, Lumen Studio</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 3 -->
+                        <div class="slide">
+                            <div class="card">
+                                <div class="stars">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                                <p class="quote">Since switching, our team's productivity has gone up by 40%. The
+                                    reporting features alone saved us hours each week. I cannot imagine going back
+                                    to our old workflow.</p>
+                                <div class="divider"></div>
+                                <div class="author">
+                                    <div class="avatar">S</div>
+                                    <div class="author-info">
+                                        <p class="name">Sophia Nguyen</p>
+                                        <p class="role">Operations Lead, Arcform</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- .slides -->
+                </div><!-- .slider-wrap -->
+
+                <!-- dots -->
+                <div class="dots">
+                    <label for="s1"></label>
+                    <label for="s2"></label>
+                    <label for="s3"></label>
                 </div>
             </div>
         </div>
+
     </div>
     <!-- testimonial-end -->
+
+    <!-- bar-section -->
+
+    <div class="bar-container">
+       
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
     <script src="script.js"></script>

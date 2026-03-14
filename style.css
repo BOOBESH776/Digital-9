@@ -840,30 +840,195 @@ body {
 
 /* testimonial */
 
-.carousel img {
-    width: 70px;
-    max-height: 70px;
-    border-radius: 50%;
-    margin-right: 1rem;
+
+:root {
+    --cream: #1a0052;
+    --dark: #1a1612;
+    --gold: #c9a84c;
+    --muted: #7a6f62;
+}
+
+/* ── HEADING ─────────────────────────────────────── */
+.section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+/* ── SLIDER WRAPPER ──────────────────────────────── */
+.slider-wrap {
+    width: 100%;
+    max-width: 780px;
     overflow: hidden;
+    position: relative;
 }
 
-.carousel-inner {
-    padding: 1em;
+/* hidden radio inputs */
+#s1,
+#s2,
+#s3 {
+    display: none;
 }
 
-
-.carousel .card {
-    margin: 0 0.5em;
-    border: 0;
+/* ── SLIDES TRACK ────────────────────────────────── */
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform .55s cubic-bezier(.77, 0, .18, 1);
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 3rem;
-    height: 3rem;
-    background-color: grey;
+#s1:checked~.slider-wrap .slides {
+    transform: translateX(0%);
+}
+
+#s2:checked~.slider-wrap .slides {
+    transform: translateX(-33.333%);
+}
+
+#s3:checked~.slider-wrap .slides {
+    transform: translateX(-66.666%);
+}
+
+/* ── SINGLE SLIDE ────────────────────────────────── */
+.slide {
+    width: 33.333%;
+    padding: 0 12px;
+    flex-shrink: 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    padding: 52px 48px 44px;
+    position: relative;
+    box-shadow: 0 2px 32px #1a161210;
+}
+
+/* big quote mark */
+.card::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    color: var(--gold);
+    opacity: .18;
+    position: absolute;
+    top: 10px;
+    left: 36px;
+    line-height: 1;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.stars span {
+    color: var(--gold);
+    font-size: 15px;
+}
+
+.quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--dark);
+    margin-bottom: 32px;
+}
+
+.divider {
+    width: 36px;
+    height: 1.5px;
+    background: var(--gold);
+    margin-bottom: 24px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
+    object-fit: cover;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
+    flex-shrink: 0;
 }
+
+.author-info .name {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.author-info .role {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+/* ── DOTS ────────────────────────────────────────── */
+.dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 36px;
+}
+
+.dots label {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c9a84c44;
+    cursor: pointer;
+    display: block;
+    transition: background .3s, transform .3s;
+}
+
+#s1:checked~.dots label[for="s1"],
+#s2:checked~.dots label[for="s2"],
+#s3:checked~.dots label[for="s3"] {
+    background: var(--gold);
+    transform: scale(1.35);
+}
+
+
+.testimonial-container {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* testimonial-end */
+
+/* bar-aniamtion */
