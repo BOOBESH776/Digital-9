@@ -48,10 +48,11 @@ plans.forEach(function (features) {
     const col = document.createElement('div');
     col.className = 'plan-col';
 
-    const ul = document.createElement('ul');
+    const ul = document.createElement('div');
+    ul.style.fontSize = "18px";
     ul.className = 'features';
     features.forEach(function (text) {
-        const li = document.createElement('li');
+        const li = document.createElement('p');
         li.textContent = text;
         ul.appendChild(li);
     });
